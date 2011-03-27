@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem "rails"
 gem "sqlite3-ruby", :require => "sqlite3"
+gem "bcrypt-ruby", :require => "bcrypt"
 gem "twitter"
 
 group :development, :test do
