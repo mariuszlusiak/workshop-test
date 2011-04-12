@@ -1,4 +1,4 @@
-<h1>Listing twitter_users</h1>
+<h1>Listing twitter users</h1>
 
 <table>
   <tr>
@@ -11,7 +11,6 @@
 
 <% @twitter_users.each do |twitter_user| %>
   <tr>
-    <td><%= twitter_user.user_id %></td>
     <td><%= twitter_user.name %></td>
     <td><%= link_to 'Show', twitter_user %></td>
     <td><%= link_to 'Edit', edit_twitter_user_path(twitter_user) %></td>

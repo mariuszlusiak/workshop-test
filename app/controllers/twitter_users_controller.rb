@@ -2,7 +2,7 @@ class TwitterUsersController < ApplicationController
   # GET /twitter_users
   # GET /twitter_users.xml
   def index
-    @twitter_users = TwitterUser.all
+    @twitter_users = current_user.twitter_users.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,7 +41,7 @@ class TwitterUsersController < ApplicationController
   # POST /twitter_users.xml
   def create
     @twitter_user = TwitterUser.new(params[:twitter_user])
-
+    @twitter_user.user = current_user
     respond_to do |format|
       if @twitter_user.save
         format.html { redirect_to(@twitter_user, :notice => 'Twitter user was successfully created.') }
