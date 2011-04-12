@@ -29,4 +29,8 @@ class User < ActiveRecord::Base
     end
   end
   
+  def latest_tweets
+    twitter_users.map { |twitter_user| twitter_user.status }
+  end
+  
 end

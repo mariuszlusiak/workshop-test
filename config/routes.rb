@@ -1,6 +1,6 @@
 WorkshopTest::Application.routes.draw do
   
-  get "tweets/index"
+  get "tweets" => "tweets#index"
 
   resources :twitter_users
 
