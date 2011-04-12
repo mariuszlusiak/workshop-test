@@ -1,4 +1,7 @@
 class TwitterUsersController < ApplicationController
+  
+  before_filter :login_required
+  
   # GET /twitter_users
   # GET /twitter_users.xml
   def index

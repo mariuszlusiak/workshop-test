@@ -1,5 +1,7 @@
 WorkshopTest::Application.routes.draw do
   
+  get "tweets/index"
+
   resources :twitter_users
 
   get "log_in" => "sessions#new", :as => "log_in"
