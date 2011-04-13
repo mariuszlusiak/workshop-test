@@ -5,6 +5,7 @@ gem "sqlite3-ruby", :require => "sqlite3"
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "twitter"
 gem "jquery-rails"
+gem "fb_graph"
 
 group :development, :test do
   gem "rspec-rails"
